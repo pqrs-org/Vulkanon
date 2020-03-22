@@ -1,0 +1,17 @@
+#ifndef GENERATED_e87b3af185fbeb6bd3b4164f551ab9a2_HPP 
+#define GENERATED_e87b3af185fbeb6bd3b4164f551ab9a2_HPP 
+
+#include "bullet.hpp" 
+
+void stepfunc_456753c9ab23d0c18884db48a58a16e6_237614aaec8157c2c678e39a91b6f99b(BulletInfo *p); 
+void stepfunc_30a5b118867561f3ad2802c148f182e3_237614aaec8157c2c678e39a91b6f99b(BulletInfo *p); 
+void stepfunc_fc499abee849ad3ec48ab61df1d3ae95_237614aaec8157c2c678e39a91b6f99b(BulletInfo *p); 
+void stepfunc_dae2cf81747ffb5070f05c8837b1d568_237614aaec8157c2c678e39a91b6f99b(BulletInfo *p); 
+
+
+extern const BulletStepFunc bullet_66a2f95601e784c18e0dab7a14ea58ac_237614aaec8157c2c678e39a91b6f99b[]; 
+const unsigned int bullet_66a2f95601e784c18e0dab7a14ea58ac_237614aaec8157c2c678e39a91b6f99b_size = 64; 
+
+
+#endif 
+

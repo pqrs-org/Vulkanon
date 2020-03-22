@@ -1,0 +1,3 @@
+extern const BulletStepFunc bullet_ad17e24e2aa20f678a19b17be5213ea0_fd52ad7c32cd66562d39fa277c4b3797[] = { 
+stepfunc_d5b50929d4498db95fe3b57b9c6c8094_fd52ad7c32cd66562d39fa277c4b3797,
+NULL}; 

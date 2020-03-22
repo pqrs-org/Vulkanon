@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/bulletml.dtd">
+<bulletml>
+  <action label="top">
+    <changeDirection>
+      <direction type="sequence">1</direction>
+      <term>9999</term>
+    </changeDirection>
+    <changeSpeed>
+      <speed type="absolute">1</speed>
+      <term>1</term>
+    </changeSpeed>
+    <wait>60</wait>
+    <repeat>
+      <times>30</times>
+      <action>
+        <repeat>
+          <times>20</times>
+          <action>
+            <actionRef label="fireSide">
+              <param>90</param>
+              <param>180</param>
+            </actionRef>
+            <fire>
+              <direction type="relative">180</direction>
+              <speed type="absolute">2</speed>
+              <bullet />
+            </fire>
+            <actionRef label="fireSide">
+              <param>-90</param>
+              <param>180</param>
+            </actionRef>
+            <wait>3</wait>
+          </action>
+        </repeat>
+        <wait>20</wait>
+      </action>
+    </repeat>
+    <vanish />
+  </action>
+  <action label="fireSide">
+    <fire>
+      <direction type="relative">$2</direction>
+      <speed type="absolute">2</speed>
+      <bullet>
+        <action>
+          <changeDirection>
+            <direction type="sequence">-$1</direction>
+            <term>1</term>
+          </changeDirection>
+          <wait>2</wait>
+          <changeDirection>
+            <direction type="sequence">$1</direction>
+            <term>1</term>
+          </changeDirection>
+        </action>
+      </bullet>
+    </fire>
+  </action>
+</bulletml>

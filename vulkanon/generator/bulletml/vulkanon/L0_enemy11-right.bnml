@@ -1,0 +1,25 @@
+//-*- Mode: c; indent-tabs-mode: nil; Coding: utf-8; -*-
+// BulletNotML code (http://www.notava.org/notavacc/bullet/index.html)
+
+action top {
+  changeDirection absolute 90 term 1;
+  changeSpeed absolute 2 term 1;
+  wait 2;
+
+  changeSpeed absolute 1 term 120;
+
+  repeat 20 action {
+    actionRef fireTargetSelf(90);
+    actionRef fireTargetSelf(-90);
+    wait 2;
+  }
+  vanish;
+}
+
+// $1: direction
+action fireTargetSelf {
+  fire direction relative $1 speed absolute 2 bullet action {
+    wait $rand * 5;
+    changeDirection aim 0 term 1;
+  }
+}

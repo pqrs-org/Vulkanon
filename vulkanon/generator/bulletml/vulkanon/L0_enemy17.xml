@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/bulletml.dtd">
+<bulletml>
+  <action label="top">
+    <changeDirection>
+      <direction type="absolute">180</direction>
+      <term>1</term>
+    </changeDirection>
+    <changeSpeed>
+      <speed type="absolute">1</speed>
+      <term>1</term>
+    </changeSpeed>
+    <repeat>
+      <times>20</times>
+      <action>
+        <repeat>
+          <times>5</times>
+          <action>
+            <fire>
+              <direction type="absolute">135</direction>
+              <speed type="absolute">2</speed>
+              <bullet />
+            </fire>
+            <fire>
+              <direction type="absolute">225</direction>
+              <speed type="absolute">2</speed>
+              <bullet />
+            </fire>
+            <wait>2</wait>
+          </action>
+        </repeat>
+        <wait>8</wait>
+      </action>
+    </repeat>
+  </action>
+</bulletml>

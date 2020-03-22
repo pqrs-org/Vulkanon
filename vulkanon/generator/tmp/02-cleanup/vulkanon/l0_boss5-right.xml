@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<!DOCTYPE bulletml SYSTEM "http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/bulletml.dtd">
+<bulletml uniqID="da3c2a55b270cbe61ada2649019872a0"><topFire><fire><bullet><action label="top"><repeat><times>360</times><action><repeat><times>5</times><action><fire><direction type="sequence">3</direction><speed type="absolute">2</speed><bullet><action><wait>20*$rand</wait><changeDirection><direction type="aim">0</direction><term>1</term></changeDirection></action></bullet></fire></action></repeat><wait>3</wait></action></repeat><vanish/></action></bullet></fire></topFire></bulletml>

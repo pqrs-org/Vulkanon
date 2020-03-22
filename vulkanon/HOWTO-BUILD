@@ -1,0 +1,24 @@
+* convert image resource to C++-code.
+
+    % cd images/
+    % ./conv.sh
+
+
+* convert save data (vulkanon.sav) to C++-code.
+
+    % cd demoplay
+    % ./conv.sh
+
+
+------------------------------------------------------------
+Note: build from svn repository
+
+    % svn export file:///home/tekezo/local/svn/gba/release/vulkanon-1.0
+    % cd vulkanon-1.0
+    % cp -r ~/gba/boost* .
+    % cd vulkanon/generator
+    % ./CopyAll.sh
+    % ./convall.sh
+
+    % cd ..
+    % make

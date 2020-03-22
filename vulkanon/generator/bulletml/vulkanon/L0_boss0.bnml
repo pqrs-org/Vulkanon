@@ -1,0 +1,34 @@
+//-*- Mode: c; indent-tabs-mode: nil; Coding: utf-8; -*-
+// BulletNotML code (http://www.notava.org/notavacc/bullet/index.html)
+
+action top {
+  changeDirection absolute 180 term 1;
+  changeSpeed speed absolute 1 term 1;
+  wait 40;
+
+  changeSpeed speed absolute 0.1 term 1;
+  wait 1;
+
+  repeat 20 action {
+    repeat 2 action {
+      fire direction aim 0 speed absolute 2 bullet;
+      repeat 35 action {
+        fire direction sequence 10 speed absolute 2 bullet;
+      }
+      wait 2;
+    }
+
+    repeat 5 action {
+      actionRef fireShot(-20);
+      actionRef fireShot(20);
+    }
+
+    wait 30;
+  }
+}
+
+action fireShot {
+  fire direction aim $1 speed sequence 0.5 bullet;
+  fire direction aim $1 + 2 speed sequence 0 bullet;
+  fire direction aim $1 - 2 speed sequence 0 bullet;
+}
